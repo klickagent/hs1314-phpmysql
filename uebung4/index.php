@@ -97,12 +97,12 @@
 					
 					require "lib/dropbox-php-sdk-1.1.1/Dropbox/autoload.php";
 					
-					$accessToken = 'o8Wr_AAo2TkAAAAAAAAAAdxSIGtHS_CVqcuorSS7xfqIOZrF0gE970l3vOBoYRdi';
+					$accessToken = '1OOHAlFwjSMAAAAAAAAAAX_4bq57F9B3WgGr2aLSxNxZzJyoySw30ebDGjCJ7Mgc';
 					$dbxClient = new Dropbox\Client($accessToken, "PHP-Example/1.0");
 					
 					if( is_file( $data['filepath'] ) ) {
 						$f = fopen( $data['filepath'], "rb");
-						$result = $dbxClient->uploadFile( '/bugreports/'.$data['submitdate'].'/'.$data['submittime'].'_'. basename($data['filepath']), Dropbox\WriteMode::add(), $f);
+						$result = $dbxClient->uploadFile( '/lickerom/bugreports/'.$data['submitdate'].'/'.$data['submittime'].'_'. basename($data['filepath']), Dropbox\WriteMode::add(), $f);
 						fclose($f);
 					}
 					
@@ -150,17 +150,13 @@
 				echo '3. Copy the authorization code.\n';
 			
 				
-				$authCode = trim("OCNZNudeLG8AAAAAAAAAAfJ9Q-3XZFGp89gEpe48pi4");
+				//$authCode = trim("pfM6IJpuoGEAAAAAAAAAAUufZK8wg3raAi61rZnB6O0");
 
 
 				list($accessToken, $dropboxUserId) = $webAuth->finish($authCode);
 				print "Access Token: " . $accessToken . "\n";
-				
-				//$accessToken = 'o8Wr_AAo2TkAAAAAAAAAAdxSIGtHS_CVqcuorSS7xfqIOZrF0gE970l3vOBoYRdi';
-				//$dbxClient = new dbx\Client($accessToken, "PHP-Example/1.0");
-				//$accountInfo = $dbxClient->getAccountInfo();
-				//print_r($accountInfo);
 				*/
+				
 ?>
 	
 	<h2>Bitte melde deinen Bug mit diesem Formular</h2>
