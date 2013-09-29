@@ -20,7 +20,7 @@ h2 {
 	color: #474E69;
 }
 
-input[type="text"],input[type="password"],input[type="email"], textarea {
+input[type="text"],input[type="password"],input[type="email"],input[type="url"],input[type="date"], textarea {
 	padding: 10px;
 	border: 1px solid #E5E5E5;
 	width: 200px;
@@ -37,12 +37,16 @@ textarea {
 	line-height: 18px;
 }
 
-input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover, textarea:hover,
-input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus, textarea:focus {
+input[type="text"]:hover,input[type="password"]:hover,input[type="email"]:hover,input[type="url"]:hover,input[type="date"]:hover, textarea:hover,
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="date"]:focus, textarea:focus {
 	border-color: 1px solid #C9C9C9;
 	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+input.failedValidation, textarea.failedValidation{
+	background: rgba(255,0,0,0.2);
 }
 
 .form label {

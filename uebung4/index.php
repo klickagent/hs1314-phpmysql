@@ -1,5 +1,6 @@
 <?php
 	define('DEBUG',true);
+	date_default_timezone_set('Europe/Zurich');
 
 	if(DEBUG){
 		error_reporting(E_ALL);
@@ -51,13 +52,13 @@
 				}
 				
 				//validate email:
-				if(empty($_POST['email']) || 1===1){
+				if(empty($_POST['email']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 					$status[] = 'mail not valid';
 				}
 				
 				if(empty($_POST['web']) ){
 					$status[] = 'web empty';
-				} else if ( filter_var($url, FILTER_VALIDATE_URL) === false ){
+				} else if ( filter_var($_POST['web'], FILTER_VALIDATE_URL) === false ){
 					$status[] = 'url invalid';
 				}
 				
@@ -69,19 +70,44 @@
 				if(empty($_POST['date']) ){
 					$status[] = 'date empty';
 				} else {
-					$d = DateTime::createFromFormat('d.m.Y', $_POST['date']);
-					if( !$d || $d->format($format) != $date )
-						$status[] = 'date empty';
+					$format = 'Y-m-d';
+					$d = DateTime::createFromFormat($format, $_POST['date']);
+					
+					if( !$d || $d->format($format) != $_POST['date'] )
+						$status[] = 'date format error';
 				}
 				
-				if( !empty($status) ){
+				if( count($status) === 0 ){
 					$data = array();
 					$data['name'] = $_POST['name'];
-					$data['submittime'] = @time();
-					$data['submitdate'] = @date();
+					$data['text'] = $_POST['text'];
+					$data['submittime'] = @time('H:i:s');
+					$data['submitdate'] = @date('Y.m.d');
 					$data['filepath'] = $filepath;
 					$data['email'] = $_POST['email'];
-					file_put_contents('bugreports/'.@date().@time().'.txt',serialize($data));
+					$data['username'] = $_POST['username'];
+					file_put_contents('bugreports/'.$data['submitdate'].' '.$data['submittime'].'.txt',serialize($data));
+					
+					
+					
+					include ( 'lib/sendmail.php' );
+					
+					if(!mail_attachment($data['email'],'Bugreport '.$data['submitdate'].' '.$data['submittime'],$data['text'],'lickerom@students.zhaw.ch',$data['filepath']) )
+						$status[] = 'confirmation mail could not be sent';
+					
+					require "lib/dropbox-php-sdk-1.1.1/Dropbox/autoload.php";
+					
+					$accessToken = 'o8Wr_AAo2TkAAAAAAAAAAdxSIGtHS_CVqcuorSS7xfqIOZrF0gE970l3vOBoYRdi';
+					$dbxClient = new Dropbox\Client($accessToken, "PHP-Example/1.0");
+					
+					if( is_file( $data['filepath'] ) ) {
+						$f = fopen( $data['filepath'], "rb");
+						$result = $dbxClient->uploadFile( '/bugreports/'.$data['submitdate'].'/'.$data['submittime'].'_'. basename($data['filepath']), Dropbox\WriteMode::add(), $f);
+						fclose($f);
+					}
+					
+					$status[] = 'Bug submitted successfully';
+					$_POST = array();
 				}
 			}
 		}
@@ -104,15 +130,44 @@
 	<?php if( $status ) { ?>
 	<div id="state">
 		<?php foreach ( $status as $s ) {
-			echo $s;
+			echo $s.'<br/>';
 		}; ?>
 	</div>
 	<?php } ?>
+	
+	<?php 
+				/*
+				require "lib/dropbox-php-sdk-1.1.1/Dropbox/autoload.php";
+				use \Dropbox as dbx;
+				
+				$appInfo = dbx\AppInfo::loadFromJsonFile("config/dropbox.json");
+				$webAuth = new dbx\WebAuthNoRedirect($appInfo, "PHP-Example/1.0");
+				
+				$authorizeUrl = $webAuth->start();
+				
+				echo '1. Go to: <a href="' . $authorizeUrl . '">authorize</a>\n';
+				echo '2. Click \"Allow\" (you might have to log in first).\n';
+				echo '3. Copy the authorization code.\n';
+			
+				
+				$authCode = trim("OCNZNudeLG8AAAAAAAAAAfJ9Q-3XZFGp89gEpe48pi4");
+
+
+				list($accessToken, $dropboxUserId) = $webAuth->finish($authCode);
+				print "Access Token: " . $accessToken . "\n";
+				
+				//$accessToken = 'o8Wr_AAo2TkAAAAAAAAAAdxSIGtHS_CVqcuorSS7xfqIOZrF0gE970l3vOBoYRdi';
+				//$dbxClient = new dbx\Client($accessToken, "PHP-Example/1.0");
+				//$accountInfo = $dbxClient->getAccountInfo();
+				//print_r($accountInfo);
+				*/
+?>
+	
 	<h2>Bitte melde deinen Bug mit diesem Formular</h2>
 	
 	<a href="list.php">Show list of current reported bugs</a>
 	
-	<form class="form" action="index.php" method="post" enctype="multipart/form-data">
+	<form class="form" action="index.php" method="post" enctype="multipart/form-data" onsubmit="return validateValues();">
 		<input type="hidden" name="submit" value="1"/>
 		<h3>Login</h3>
 		
@@ -135,7 +190,7 @@
 		</p>
 		
 		<p class="web">
-			<input type="text" name="web" id="web" placeholder="www.example.com" required="required" value="<?php echo @$_POST['web']; ?>"/>
+			<input type="url" pattern="https?://.+" name="web" id="web" placeholder="www.example.com" required="required" value="<?php echo @$_POST['web']; ?>"/>
 			<label for="web">Betreffende Website</label>
 		</p>		
 	
@@ -170,7 +225,7 @@
 		
 		<p>
 			<label for="reproducable">
-				Call me back
+				Reproduceable
 			</label>
 			Yes
 			<input type="radio" name="reproducable" value="yes" checked="checked" required="required" <?php echo (@$_POST['reproducable'] === 'yes') ? 'checked="checked"' : ''; ?>/>
