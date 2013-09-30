@@ -1,5 +1,5 @@
 <?php
-	define('DEBUG',true);
+	define('DEBUG',false);
 	date_default_timezone_set('Europe/Zurich');
 
 	if(DEBUG){
