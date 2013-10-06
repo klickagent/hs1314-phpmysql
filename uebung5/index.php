@@ -5,7 +5,6 @@
 	$get = explode('/',@$_GET['vars']);
 	$todoListID = $get[0];
 	
-	
 	$db = new PDO('mysql:host=localhost;dbname=php_mysql_programmieren', 'php_prog_user',
 	'php_mysql_programmieren_pw');
 	
