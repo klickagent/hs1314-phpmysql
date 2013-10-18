@@ -29,14 +29,18 @@
 	if(!empty($todoListID)){
 		if ( isset( $_POST['newTodo'] ) ) {
 			
-			$stmt = $db->prepare("INSERT INTO todos (list_id, text) VALUES (:list_id, :text)");
-			$stmt->bindParam(':list_id', $todoListID);
-			$stmt->bindParam(':text', $_POST['text']);
-			$stmt->execute();
-			$status[]='Todo created';
-			
-			header('Location: '.dirname($_SERVER['PHP_SELF']).'/'.$todoListID .'/');
-			die();
+			if( empty( $_POST['text'] ) ) {
+				$status[]='Todo cannot be empty';
+			} else {
+				$stmt = $db->prepare("INSERT INTO todos (list_id, text) VALUES (:list_id, :text)");
+				$stmt->bindParam(':list_id', $todoListID);
+				$stmt->bindParam(':text', $_POST['text']);
+				$stmt->execute();
+				$status[]='Todo created';
+				$_SESSION['state'] = $status;
+				header('Location: '.dirname($_SERVER['PHP_SELF']).'/'.$todoListID .'/');
+				die();
+			}
 			
 		} else if ( isset( $_POST['saveTodo'] ) ) {
 		
@@ -50,7 +54,7 @@
 			$stmt->execute();
 			
 			$status[]='Todo updated';
-			
+			$_SESSION['state'] = $status;
 			header('Location: '.dirname($_SERVER['PHP_SELF']).'/'.$todoListID .'/');
 			die();
 		} else if ( isset( $_POST['saveDone'] ) ) {
@@ -64,7 +68,7 @@
 			$stmt->execute();
 			
 			$status[]='Todo updated';
-			
+			$_SESSION['state'] = $status;
 			header('Location: '.dirname($_SERVER['PHP_SELF']).'/'.$todoListID .'/');
 			die();
 		}
@@ -141,6 +145,7 @@
 		<?php foreach ( $status as $s ) {
 			echo $s.'<br/>';
 		}; ?>
+		<div class="bottomborder"></div>
 	</div>
 	<?php } ?>
 	
@@ -149,11 +154,13 @@
 		<div class="row">
 			<div class="span12">
 					
-				<h2>Easy Todo</h2>
+				<h2><a href="<?php echo dirname($_SERVER['PHP_SELF']); ?>">Easy Todo</a></h2>
 				
 				
 				<?php if ( empty( $todoListID ) ) { ?>
-					<h3>Create your easy todo now:</h3>
+					<h3>Create your list now</h3>
+					<br/>
+					<br/>
 					<form action="<?php echo dirname($_SERVER['PHP_SELF']); ?>/" method="post">
 						<input type="hidden" value="1" name="createNewList"/>
 						<input type="submit" value="Create your todo list"/>
@@ -164,7 +171,7 @@
 							<form action="<?php echo dirname($_SERVER['PHP_SELF']).'/'.$todoListID; ?>/" method="post">
 								<input type="hidden" value="1" name="newTodo"/>
 								<input type="text" value="" placeholder="Your new todo" name="text"/>
-								<input type="submit" value="Create New Todo"/>
+								<input type="submit" value="&nbsp;&nbsp;OK&nbsp;&nbsp;"/>
 							</form>
 							
 							
