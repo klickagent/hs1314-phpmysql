@@ -6,26 +6,20 @@
 		private $post_attrs = [];
 		private $model = 'tbl_person';
 		
-		public function __construct($attrs=false){
-			global $db;
-			
-			/* why is this not working?!?! */
-			//$stmt = $db->prepare('DESCRIBE :table');
-			//$stmt->execute(array( 'table' => $this->model ) );
-			//$this->attrs = $stmt->fetchAll(PDO::FETCH_ASSOC);
-			//alternativ: PDO::FETCH_COLUMN
+		public function __construct(){
 			
 		}
 		
 		public function createPost($attrs=true){
 			$newPost = new Post($attrs);
-			return $newPost->getID();
+			return $newPost;
 		}
 		
 		public function updatePost($id,$attr){
 			$editPost = new Post();
 			$editPost->findByID($id);
 			$editPost->update($attr);
+			return $editPost;
 		}
 		
 		public function deletePost($id){

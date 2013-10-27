@@ -7,7 +7,8 @@
 	include( 'class/PostModel_RowDataGateWay.class.php');
 	include( 'class/PostModel_TableDataGateWay.class.php');
 	
-echo '<h1>Row Data Gateway Pattern</h1>';	
+echo '<h1>Row Data Gateway Pattern</h1>
+	<p><a href="http://martinfowler.com/eaaCatalog/rowDataGateway.html">wiki</a></p>';	
 	
 	
 	$post1 = new Post();
@@ -40,14 +41,15 @@ echo '<h1>Row Data Gateway Pattern</h1>';
 	$post3_ref->update(array('content' => 'post3_changed after find by id'));
 	
 	
-echo '<h1>Table Data Gateway Pattern</h1>';		
+echo '<h1>Table Data Gateway Pattern</h1>
+	<p><a href="http://martinfowler.com/eaaCatalog/tableDataGateway.html">wiki</a></p>';		
 	
 	
 	$table = new PostTable();
 	
 	echo '<hr>';
 	$post4_id = $table->createPost(array( 'title' => 'new post 4, tdg'));
-	echo 'post4 id: '.$post4_id.'<br/>';
+	echo 'post4 id: '.$post4_id->getID().'<br/>';
 	$table->updatePost(4,array('content' => 'editing post 4 content through table data gateway'));
 	
 	echo '<hr>';
@@ -55,7 +57,7 @@ echo '<h1>Table Data Gateway Pattern</h1>';
 	
 	echo '<hr>';
 	$post6_id = $table->createPost(array( 'title' => 'post 6, tdg'));
-	echo 'post6 id: '.$post6_id.'<br/>';
+	echo 'post6 id: '.$post6_id->getID().'<br/>';
 	$table->deletePost(6);
 	
 	echo '<hr>';
