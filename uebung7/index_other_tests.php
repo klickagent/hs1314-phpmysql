@@ -7,6 +7,8 @@
 	include( 'class/PostModel_RowDataGateWay.class.php');
 	include( 'class/PostModel_TableDataGateWay.class.php');
 	
+echo '<a href="index.php">back</a>';
+	
 echo '<h1>Row Data Gateway Pattern</h1>
 	<p><a href="http://martinfowler.com/eaaCatalog/rowDataGateway.html">wiki</a></p>';	
 	
