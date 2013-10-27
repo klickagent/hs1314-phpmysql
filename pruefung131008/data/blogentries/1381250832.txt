@@ -1,0 +1,1 @@
+a:8:{s:4:"name";s:7:"AUTHOR2";s:4:"text";s:5:"TEXT2";s:5:"title";s:6:"TITLE2";s:4:"date";s:10:"2013-10-27";s:10:"submittime";i:1381252052;s:10:"submitdate";s:10:"2013.10.08";s:8:"filepath";s:0:"";s:8:"username";s:4:"test";}
