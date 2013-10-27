@@ -26,6 +26,7 @@
 				$this->attrValues[$key] = '';
 			}
 			if( $attrs !== false ) {
+				if( $attrs === true ) $attrs = array();
 				self::create($attrs);
 			}
 		}
@@ -93,7 +94,7 @@
 			global $db;
 			$t = 'DELETE FROM '.$this->model.' WHERE id= :id';
 			$stmt = $db->prepare($t);
-			$executeVals = array( ':id' =>  $this->id );
+			$executeVals = array( 'id' =>  $this->id );
 			$stmt->execute( $executeVals );
 			
 			
@@ -111,12 +112,10 @@
 		}
 		
 		
-
-		
 		
 		public function findByID( $id ){
 			global $db;
-			$executeVals = array( ':id' =>  $id ) ;
+			$executeVals = array( 'id' =>  $id ) ;
 			$t = 'SELECT * FROM '.$this->model.' WHERE id= :id';
 			$stmt = $db->prepare($t);
 			$stmt->execute( $executeVals );
@@ -138,20 +137,41 @@
 		}
 		
 		
+		public function getID(){
+			return $this->id;
+		}
 		
 		public function getCreated(){
-			return $this->attrValues['created'];
+			return self::getAttr('created');
 		}
 		
 		public function getTitle(){
-			return $this->attrValues['title'];
+			return self::getAttr('title');
 		}
 		
 		public function getContent(){
-			return $this->attrValues['content'];
+			return self::getAttr('content');
 		}
 		
-		
+		private function getAttr($attr){
+			global $db;
+			$attr_sql = SQLite3::escapeString($attr);
+			$executeVals = array(  'id' =>  $this->id ) ;
+			$t = 'SELECT '.$attr_sql.' FROM '.$this->model.' WHERE id= :id';
+			$stmt = $db->prepare($t);
+			$stmt->execute( $executeVals );
+			//echo $stmt->debugDumpParams();
+			$data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			
+			if(DEBUG_DB_QUERIES){
+				echo $t.'<br/>';
+				print_r($executeVals);
+				echo '<br/>';
+			}
+			
+			
+			return $data[0][$attr];
+		}
 		
 	}
 
