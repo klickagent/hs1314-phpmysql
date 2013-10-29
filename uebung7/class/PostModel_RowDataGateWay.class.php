@@ -10,8 +10,9 @@
 		private $model = 'tbl_person';
 		
 		
-		public function __construct($attrs=false){
+		public function __construct($attrs=false,$model=false,$fields=false){
 			global $db;
+			if( $model ) $this->model = $model;
 			
 			/* why is this not working?!?! */
 			//$stmt = $db->prepare('DESCRIBE :table');
@@ -19,8 +20,11 @@
 			//$this->attrs = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			//alternativ: PDO::FETCH_COLUMN
 			
-			$this->attrs = array('created','title','content');
-			
+			if($fields === false ){
+				$this->attrs = array('created','title','content');
+			} else {
+				$this->attrs = $fields;
+			}
 			//init values:
 			foreach( $this->attrs as $key ) {
 				$this->attrValues[$key] = '';

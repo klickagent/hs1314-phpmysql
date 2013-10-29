@@ -1,0 +1,9 @@
+RewriteEngine On
+
+#RewriteRule ^javascripts.js - [L,NC]
+#RewriteRule ^style.css - [L,NC]
+RewriteRule ^index.php - [L,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?vars=$1&%{QUERY_STRING}

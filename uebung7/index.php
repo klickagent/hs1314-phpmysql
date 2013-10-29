@@ -7,7 +7,8 @@
 	include( 'class/PostModel_RowDataGateWay.class.php');
 	include( 'class/PostModel_TableDataGateWay.class.php');
 
-echo '<a href="index_other_tests.php">further tests</a>';
+echo '<a href="index_other_tests.php">further tests</a><br/>';
+echo '<a href="todo/">Todo App using the those classes</a>';	
 	
 echo '<h1>Row Data Gateway Pattern</h1>
 	<p><a href="http://martinfowler.com/eaaCatalog/rowDataGateway.html">wiki</a></p>';	
