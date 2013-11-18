@@ -1,10 +1,8 @@
 <?php 
-	require( ROOT . '/inc/RowDataGateWay.class.php' );
-	require( ROOT . '/inc/TableDataGateWay.class.php' );
 
 
 	class KantoneModel{
-		
+	
 		private $kantone = array (
 		  0 => 
 		  array (
@@ -13,7 +11,7 @@
 		    'Standesstimme' => '1',
 		    'Beitritt' => 1351,
 		    'Hauptort' => 'Zürich',
-		    'Einwohner 1' => '1'392'396',
+		    'Einwohner 1' => '1392396',
 		    'Ausländer 2' => '24,9 %',
 		    'Fläche 3' => '1729',
 		    'Dichte 4' => '805',
@@ -53,7 +51,7 @@
 		    'Kürzel' => 'UR',
 		    'Kanton' => 'Uri ',
 		    'Standesstimme' => '1',
-		    'Beitritt' => 12917,
+		    'Beitritt' => 1291,
 		    'Hauptort' => 'Altdorf',
 		    'Einwohner 1' => '35382',
 		    'Ausländer 2' => '10,6 %',
@@ -67,7 +65,7 @@
 		    'Kürzel' => 'SZ',
 		    'Kanton' => 'Schwyz ',
 		    'Standesstimme' => '1',
-		    'Beitritt' => 12917,
+		    'Beitritt' => 1291,
 		    'Hauptort' => 'Schwyz',
 		    'Einwohner 1' => '147904',
 		    'Ausländer 2' => '19,3 %',
@@ -81,7 +79,7 @@
 		    'Kürzel' => 'OW',
 		    'Kanton' => 'Obwalden',
 		    'Standesstimme' => '0,5',
-		    'Beitritt' => 12917,
+		    'Beitritt' => 1291,
 		    'Hauptort' => 'Sarnen',
 		    'Einwohner 1' => '35878',
 		    'Ausländer 2' => '13,8 %',
@@ -95,7 +93,7 @@
 		    'Kürzel' => 'NW',
 		    'Kanton' => 'Nidwalden ',
 		    'Standesstimme' => '0,5',
-		    'Beitritt' => 12917,
+		    'Beitritt' => 1291,
 		    'Hauptort' => 'Stans',
 		    'Einwohner 1' => '41311',
 		    'Ausländer 2' => '12,4 %',
@@ -359,7 +357,7 @@
 		  25 => 
 		  array (
 		    'Kürzel' => 'JU',
-		    'Kanton' => 'Jura ',
+		    'Kanton' => 'Jura',
 		    'Standesstimme' => '1',
 		    'Beitritt' => 1979,
 		    'Hauptort' => 'Delsberg',
@@ -370,27 +368,62 @@
 		    'Gemeinden 6' => 64,
 		    'Amtssprache' => 'französisch',
 		  ),
-		);;
+		);
 		
 		
 		public function __construct() {
-			$this->postTable = new PostTable( TABLE_NAME );
 		}
 		
-		public function getAllPosts(){
-			return $this->postTable->fetchAll();
+		public function getAllKantone(){
+			return $this->kantone;
 		}
 		
-		public function getPostById( $id ){
-			return $this->postTable->findPostBy('id',$id);
-		}
-		
-		public function createPost( $postArray ){
-			$post = new Post( false , TABLE_NAME );
-			$post->create( $postArray );
+		public function getKantonBy( $attr, $val ){
+			
+			$obj = new ArrayObject( $this->kantone );
+			$it = $obj->getIterator();
+			
+			$result = array();
+			
+			/* ITERATOR */
+			
+			//echo $val;
+			// Iterate over the values in the ArrayObject:
+			while( $it->valid() )
+			{
+			    //echo $it->key() . "=" . $it->current()[ $attr ] . "\n";
+			   $s = $it->current();
+			    if( 
+			    	$s[ $attr ] === $val || 
+			    	@strtolower($s[ $attr ]) === @strtolower( $val )
+			   	){
+			   		$result[] = $it->current();
+			   	}
+			    $it->next();
+			}
+			
+			return $result;
 		}
 		
 	
+	}
+	
+	
+	class KantoneModelFactory
+	{
+		public static function getAllKantone()
+		    {
+		        $kantone_instance = new KantoneModel();
+		        
+		        return $kantone_instance->getAllKantone();
+		    }
+		    
+		public static function getKantonBy( $attr, $val )    
+			{
+				$kantone_instance = new KantoneModel();
+				return $kantone_instance->getKantonBy(  $attr, $val );
+					
+			}
 	}
 
  ?>

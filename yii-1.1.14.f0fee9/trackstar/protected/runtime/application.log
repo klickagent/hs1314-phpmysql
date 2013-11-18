@@ -1,0 +1,98 @@
+2013/11/17 22:24:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'loc_orm.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2013/11/17 22:49:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yiiiiii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /var/www/yiiiiii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yiiiiii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yiiiiii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yiiiiii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yiiiiii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yiiiiii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yiiiiii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yiiiiii/framework/web/CWebApplication.php(282): CController->run('delete')
+#8 /var/www/yiiiiii/framework/web/CWebApplication.php(141): CWebApplication->runController('project/delete')
+#9 /var/www/yiiiiii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /var/www/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/trackstar/index.php?r=project/delete&id=1
+HTTP_REFERER=http://localhost:8080/trackstar/index.php?r=project/view&id=1
+---
+2013/11/17 22:53:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/yiiiiii/framework/web/CController.php:1118
+Stack trace:
+#0 /var/www/yiiiiii/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 /var/www/yiiiiii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /var/www/yiiiiii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /var/www/yiiiiii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /var/www/yiiiiii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/yiiiiii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/yiiiiii/framework/web/CController.php(291): CFilterChain->run()
+#7 /var/www/yiiiiii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/yiiiiii/framework/web/CWebApplication.php(282): CController->run('delete')
+#9 /var/www/yiiiiii/framework/web/CWebApplication.php(141): CWebApplication->runController('project/delete')
+#10 /var/www/yiiiiii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /var/www/trackstar/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=project/delete&id=1
+HTTP_REFERER=http://localhost:8080/trackstar/index.php?r=site/login
+---
+2013/11/18 18:02:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "project".' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php:483
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(270): CController->missingAction('project')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('project')
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('site/project')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=site/project
+---
+2013/11/18 18:02:52 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'loc_orm.tbl_project' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_project`.
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/controllers/ProjectController.php (65)
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php (13)
+2013/11/18 18:02:52 [error] [exception.CDbException] exception 'CDbException' with message 'The table "tbl_project" for active record class "Project" cannot be found in the database.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php:2362
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Project))
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/controllers/ProjectController.php(65): CActiveRecord->__construct()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): ProjectController->actionCreate()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('project/create')
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=project/create
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=site/login
+---
+2013/11/18 18:07:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('project/admin')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=project/create
+---
+2013/11/18 18:08:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "projects".' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php:483
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(270): CController->missingAction('projects')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('projects')
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('site/projects')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=site/projects
+---

@@ -2,4 +2,8 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*) index.php?vars=$1&%{QUERY_STRING}
+
+#Kantone/list/?resolver=true [L]
+RewriteCond %{REQUEST_URI} !^(.*/)?index\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^(.*/)?resolver\.php$ [NC]
+RewriteRule ^(.*) api.php?vars=$1&%{QUERY_STRING}

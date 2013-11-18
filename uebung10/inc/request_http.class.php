@@ -1,31 +1,40 @@
 <?php
 
-include( ROOT . '/inc/request.interface.php' );
-
-
+include( $settings->getRoot() . '/inc/request.interface.php' );
 
 class Request_http implements request{
+
+
 
 	private function getAllParameters(){
 		return explode('/' , $_GET['vars'] );
 	}
 
 	public function getController(){
-		return self::getAllParameters()[0];
+		$s = self::getAllParameters();
+		return $s[0];
 	}
 	
 
 	public function getView(){
-		return self::getAllParameters()[1];
+		$s = self::getAllParameters();
+		return $s[1];
 	}
 
 	
 	public function getAction(){
-		return self::getAllParameters()[2];
+		$s = self::getAllParameters();
+		return $s[2];
 	}
 	
 	public function getParam(){
-		return self::getAllParameters()[3];
+		$s = self::getAllParameters();
+		return $s[3];
+	}
+	
+	public function getGetParam( $req_param ){
+		$q_s = isset( $_GET[$req_param] ) ? $_GET[$req_param] : false;
+		return $q_s;
 	}
 	
 } 
