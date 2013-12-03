@@ -1,0 +1,531 @@
+2013/11/26 20:20:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=gii
+---
+2013/11/26 20:26:40 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('88')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=88
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/create
+---
+2013/11/26 20:27:24 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('999')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=999
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/create
+---
+2013/11/26 20:27:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/admin')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/admin
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:28:07 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('8')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=8
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:29:17 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('8')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=8
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:29:24 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('8')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=8
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:30:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/admin')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/admin
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:30:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/admin')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/admin
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:30:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/admin')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/admin
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/create
+---
+2013/11/26 20:30:31 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('8')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=8
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:32:27 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('8')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=8
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:33:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/admin')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/admin
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/index
+---
+2013/11/26 20:37:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actionIndexJson".' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php:483
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(270): CController->missingAction('actionIndexJson')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('actionIndexJson')
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/action...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/actionIndexJson
+---
+2013/11/26 20:37:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('IndexJson')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/IndexJ...')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/IndexJson
+---
+2013/11/26 20:37:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('indexJson')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/indexJ...')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+---
+2013/11/26 20:38:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('IndexJson')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/IndexJ...')
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/IndexJson
+---
+2013/11/26 20:38:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "actionIndexJson".' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php:483
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(270): CController->missingAction('actionIndexJson')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('actionIndexJson')
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/action...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/actionIndexJson
+---
+2013/11/26 20:45:33 [error] [php] Undefined variable: model (/Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php:134)
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): EpisodenController->runAction()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): EpisodenController->filterAccessControl()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): EpisodenController->runActionWithFilters()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): EpisodenController->run()
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CWebApplication->run()
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php (134)
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php (13)
+2013/11/26 20:45:41 [error] [exception.CException] exception 'CException' with message 'Property "EpisodenController.model" is not defined.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(134): CComponent->__get('model')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): EpisodenController->actionIndexJson()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('indexJson')
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/indexJ...')
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+---
+2013/11/26 20:46:40 [error] [php] Undefined variable: dataProvider (/Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php:135)
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): EpisodenController->runAction()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): EpisodenController->filterAccessControl()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): EpisodenController->runActionWithFilters()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): EpisodenController->run()
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CWebApplication->run()
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php (135)
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php (13)
+2013/11/26 20:46:58 [error] [php] json_encode() expects at least 1 parameter, 0 given (/Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php:135)
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): EpisodenController->runAction()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): EpisodenController->filterAccessControl()
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): EpisodenController->runActionWithFilters()
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): EpisodenController->run()
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CWebApplication->run()
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php (135)
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php (13)
+2013/11/26 20:48:47 [error] [php] Undefined variable: array (/Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php:142)
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): EpisodenController->runAction()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): EpisodenController->filterAccessControl()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): EpisodenController->runActionWithFilters()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): EpisodenController->run()
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CWebApplication->run()
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php (142)
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php (13)
+2013/11/26 20:49:35 [error] [exception.CException] exception 'CException' with message 'Property "Episoden.CActiveRecord_attributes" is not defined.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(145): CComponent->__get('CActiveRecord_a...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CModel.php(596): CActiveRecord->__get('CActiveRecord_a...')
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(138): CModel->offsetGet('CActiveRecord_a...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): EpisodenController->actionIndexJson()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('indexJson')
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/indexJ...')
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+---
+2013/11/26 20:49:44 [error] [exception.CException] exception 'CException' with message 'Property "Episoden.CActiveRecord_attributes" is not defined.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(145): CComponent->__get('CActiveRecord_a...')
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(138): CActiveRecord->__get('CActiveRecord_a...')
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): EpisodenController->actionIndexJson()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('indexJson')
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/indexJ...')
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+---
+2013/11/26 20:49:47 [error] [exception.CException] exception 'CException' with message 'Episoden and its behaviors do not have a method or closure named "CActiveRecord_attributes".' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/db/ar/CActiveRecord.php(227): CComponent->__call('CActiveRecord_a...', Array)
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(138): CActiveRecord->__call('CActiveRecord_a...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(138): Episoden->CActiveRecord_attributes()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): EpisodenController->actionIndexJson()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('indexJson')
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/indexJ...')
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/indexJson
+---
+2013/11/26 21:01:56 [error] [exception.CException] exception 'CException' with message 'The attribute must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/zii/widgets/CDetailView.php:183
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(173): CDetailView->run()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/views/episoden/view.php(35): CBaseController->widget('zii.widgets.CDe...', Array)
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require('/Users/roman/Ro...')
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/roman/Ro...', Array, true)
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): CBaseController->renderFile('/Users/roman/Ro...', Array, true)
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/protected/controllers/EpisodenController.php(56): CController->render('view', Array)
+#7 [internal function]: EpisodenController->actionView('99')
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(EpisodenController), Array)
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(EpisodenController), Object(ReflectionMethod), Array)
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController('episoden/view')
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/REST_breaking_bad/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/view&id=99
+HTTP_REFERER=http://localhost/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/REST_breaking_bad/index.php?r=episoden/create
+---

@@ -1,6 +1,7 @@
 <?php 
 header("Content-type: text/html; charset=utf-8");
 	$dir = dirname( $_SERVER['PHP_SELF'] );
+	if( $dir === '/' ) $dir = '';
  ?>
  
  <?php 

@@ -96,3 +96,41 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=site/projects
 ---
+2013/11/26 21:26:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'loc_orm.issue' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `issue`.
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php (13)
+2013/11/26 21:26:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'loc_orm.issue' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `Issue`.
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php (13)
+2013/11/26 21:28:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'loc_orm.tbl_issue' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_issue`.
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php (13)
+2013/11/26 21:34:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'loc_orm.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2013/11/26 21:40:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'loc_orm.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php (13)
+2013/12/02 19:59:34 [error] [php] Invalid argument supplied for foreach() (/Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/helpers/CHtml.php:2325)
+Stack trace:
+#0 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/views/issue/_form.php(42): CActiveForm->dropDownList()
+#1 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#2 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): IssueController->renderInternal()
+#3 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): IssueController->renderFile()
+#4 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/views/issue/create.php(18): IssueController->renderPartial()
+#5 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(126): require()
+#6 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CBaseController.php(95): IssueController->renderInternal()
+#7 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(869): IssueController->renderFile()
+#8 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(782): IssueController->renderPartial()
+#9 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/controllers/IssueController.php(79): IssueController->render()
+#10 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/actions/CInlineAction.php(49): IssueController->actionCreate()
+#11 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(308): CInlineAction->runWithParams()
+#12 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(133): IssueController->runAction()
+#13 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#15 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CInlineFilter.php(58): IssueController->filterAccessControl()
+#16 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#17 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(291): CFilterChain->run()
+#18 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CController.php(265): IssueController->runActionWithFilters()
+#19 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(282): IssueController->run()
+#20 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#21 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/index.php(13): CWebApplication->run()
+REQUEST_URI=/klickagent/prebeta/php_programmieren_zhaw/yii-1.1.14.f0fee9/trackstar/index.php?r=issue/create
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/views/issue/_form.php (42)
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/views/issue/create.php (18)
+in /Users/roman/RomanFiles/Studium/ZHAW/Semester5/PHP Programmieren/vm_configs/websites/yii-1.1.14.f0fee9/trackstar/protected/controllers/IssueController.php (79)
